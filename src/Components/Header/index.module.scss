@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li a {
+  padding-left: 30px;
+  text-decoration: none;
+  color: #ff6060;
+}
