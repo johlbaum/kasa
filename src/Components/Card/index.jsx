@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 import styles from "./index.module.scss";
 
 function Card(props) {
   return (
     <div className={styles.card}>
-      <img src={props.dataHousing.cover} alt={props.dataHousing.title} />
+      <Link to={`/apartment/${props.dataApartment.id}`}>
+        <img src={props.dataApartment.cover} alt={props.dataApartment.title} />
+      </Link>
     </div>
   );
 }

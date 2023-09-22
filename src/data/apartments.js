@@ -1,4 +1,4 @@
-const housing = [
+const apartments = [
   {
     id: "c67ab8a7",
     title: "Appartement cosy",
@@ -580,4 +580,4 @@ const housing = [
   },
 ];
 
-export default housing;
+export default apartments;

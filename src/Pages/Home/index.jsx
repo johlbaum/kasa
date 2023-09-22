@@ -1,4 +1,4 @@
-import housing from "../../data/housing";
+import apartments from "../../data/apartments";
 import Card from "../../Components/Card";
 
 import styles from "./index.module.scss";
@@ -6,8 +6,8 @@ import styles from "./index.module.scss";
 function Home() {
   return (
     <div className={styles.container}>
-      {housing.map((housing) => {
-        return <Card dataHousing={housing} />;
+      {apartments.map((apartment) => {
+        return <Card dataApartment={apartment} />;
       })}
     </div>
   );

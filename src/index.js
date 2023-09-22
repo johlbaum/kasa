@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Header from "./Components/Header";
 import Banner from "./Components/Banner";
 import Error from "./Components/Error";
+import ApartmentDescription from "./Pages/ApartmentDescription";
 
 import styles from "./styles/global.module.scss";
 
@@ -19,6 +20,10 @@ ReactDOM.render(
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route
+              path="/apartment/:apartmentId"
+              element={<ApartmentDescription />}
+            />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Error />} />
           </Routes>
