@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Header from "./Components/Header";
-import Banner from "./Components/Banner";
 import Error from "./Components/Error";
 import ApartmentDescription from "./Pages/ApartmentDescription";
 
@@ -16,7 +15,6 @@ ReactDOM.render(
     <Router>
       <div className={styles.mainContainer}>
         <Header />
-        <Banner />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 
+import Slider from "../../Components/Slider";
 import apartments from "../../data/apartments";
 
 function ApartmentDescription() {
@@ -11,6 +12,7 @@ function ApartmentDescription() {
 
   return (
     <div>
+      <Slider apartmentData={apartment.pictures} />
       <p>{apartment.title}</p>
     </div>
   );
