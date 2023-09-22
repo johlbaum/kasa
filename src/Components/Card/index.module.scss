@@ -1,4 +1,5 @@
 .card {
+  position: relative;
 }
 
 .card img {
@@ -7,4 +8,12 @@
   object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.card__title {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #fff;
 }
