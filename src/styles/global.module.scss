@@ -2,11 +2,16 @@ body {
   margin: 0;
 }
 
+main {
+  max-width: 1240px;
+  padding: 0 50px;
+  margin: auto;
+}
+
 .mainContainer {
   font-family: "Montserrat", sans-serif;
   width: 100%;
-  max-width: 1240px;
-  padding: 0 50px;
+  max-width: 1440px;
   box-sizing: border-box;
   margin: auto;
 }
