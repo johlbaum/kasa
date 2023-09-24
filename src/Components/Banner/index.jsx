@@ -1,11 +1,9 @@
-import BannerImg from "../../assets/banner.jpg";
-
 import styles from "./index.module.scss";
 
-function Banner() {
+function Banner(props) {
   return (
     <div className={styles.bannerContainer}>
-      <img src={BannerImg} alt="Côte rocheuse" />
+      <img src={props.imgBanner} alt="Côte rocheuse" />
       <p className={styles.banner__text}>Chez vous, partout et ailleurs</p>
     </div>
   );
