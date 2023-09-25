@@ -29,8 +29,8 @@ function Accordion({ accordionData }) {
       >
         <div className={styles.accordion__content}>
           {Array.isArray(content) ? (
-            content.map((content) => {
-              return <p>{content}</p>;
+            content.map((content, index) => {
+              return <p key={`${content}-${index}`}>{content}</p>;
             })
           ) : (
             <p>{content}</p>

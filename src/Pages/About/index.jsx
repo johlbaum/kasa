@@ -14,9 +14,12 @@ function About() {
   return (
     <>
       <Banner dataBanner={{ imgBanner: imgAboutBanner, textContent: "" }} />
-      {about.map((currentAboutData) => {
+      {about.map((currentAboutData, index) => {
         return (
-          <div className={styles.accordion}>
+          <div
+            key={`${currentAboutData}-${index}`}
+            className={styles.accordion}
+          >
             <Accordion accordionData={currentAboutData} />
           </div>
         );

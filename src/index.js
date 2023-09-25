@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -11,7 +11,9 @@ import ApartmentDescription from "./pages/ApartmentDescription";
 
 import styles from "./styles/global.module.scss";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("root"));
+
+root.render(
   <React.StrictMode>
     <Router>
       <div className={styles.mainContainer}>
@@ -30,6 +32,5 @@ ReactDOM.render(
         <Footer />
       </div>
     </Router>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

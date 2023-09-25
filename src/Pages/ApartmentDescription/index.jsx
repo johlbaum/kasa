@@ -23,10 +23,18 @@ function ApartmentDescription() {
     const stars = [];
     const rating = parseInt(apartment.rating);
     for (let i = 0; i < rating; i++) {
-      stars.push(<img src={activeStar} alt="Étoile active" />);
+      stars.push(
+        <img key={`star-${i}`} src={activeStar} alt="Étoile active" />
+      );
     }
     while (stars.length < 5) {
-      stars.push(<img src={incativeStar} alt="Étoile inactive" />);
+      stars.push(
+        <img
+          key={`star-inactive-${stars.length}`}
+          src={incativeStar}
+          alt="Étoile inactive"
+        />
+      );
     }
     return stars;
   };
@@ -44,8 +52,15 @@ function ApartmentDescription() {
               {apartment.location}
             </p>
             <div className={styles.desciption__tags}>
-              {apartment.tags.map((tag) => {
-                return <p className={styles.description__tags__tag}>{tag}</p>;
+              {apartment.tags.map((tag, index) => {
+                return (
+                  <p
+                    key={`${tag}-${index}`}
+                    className={styles.description__tags__tag}
+                  >
+                    {tag}
+                  </p>
+                );
               })}
             </div>
           </div>

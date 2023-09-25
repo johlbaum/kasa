@@ -20,7 +20,7 @@ function Home() {
       />
       <div className={styles.container}>
         {apartments.map((apartment) => {
-          return <Card dataApartment={apartment} />;
+          return <Card key={apartment.id} dataApartment={apartment} />;
         })}
       </div>
     </>
