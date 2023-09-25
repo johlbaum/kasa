@@ -1,6 +1,6 @@
 import imgAboutBanner from "../../assets/about-banner.jpg";
-import Banner from "../../Components/Banner/";
-import Accordion from "../../Components/Accordion";
+import Banner from "../../components/Banner/";
+import Accordion from "../../components/Accordion";
 import about from "../../data/about";
 
 import styles from "./index.module.scss";

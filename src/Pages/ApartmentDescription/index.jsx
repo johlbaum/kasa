@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 
-import Slider from "../../Components/Slider";
-import Accordion from "../../Components/Accordion";
-
+import Slider from "../../components/Slider";
+import Accordion from "../../components/Accordion";
+import activeStar from "../../assets/star-active.png";
+import incativeStar from "../../assets/star-inactive.png";
 import apartments from "../../data/apartments";
 
 import styles from "./index.module.scss";
@@ -13,6 +14,18 @@ function ApartmentDescription() {
   const apartment = apartments.find(
     (apartment) => apartment.id === apartmentId
   );
+
+  const displayRate = () => {
+    const stars = [];
+    const rating = parseInt(apartment.rating);
+    for (let i = 0; i < rating; i++) {
+      stars.push(<img src={activeStar} alt="Étoile active" />);
+    }
+    while (stars.length < 5) {
+      stars.push(<img src={incativeStar} alt="Étoile inactive" />);
+    }
+    return stars;
+  };
 
   return (
     <div>
@@ -37,6 +50,7 @@ function ApartmentDescription() {
               <p>{apartment.host.name}</p>
               <img src={apartment.host.picture} alt="Hôte" />
             </div>
+            {displayRate()}
           </div>
         </div>
         <div className={styles.accordions}>

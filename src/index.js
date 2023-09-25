@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Error from "./Components/Error";
-import ApartmentDescription from "./Pages/ApartmentDescription";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Error from "./components/Error";
+import ApartmentDescription from "./pages/ApartmentDescription";
 
 import styles from "./styles/global.module.scss";
 

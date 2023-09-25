@@ -1,6 +1,6 @@
 import apartments from "../../data/apartments";
-import Card from "../../Components/Card";
-import Banner from "../../Components/Banner";
+import Card from "../../components/Card";
+import Banner from "../../components/Banner";
 import imgHomeBanner from "../../assets/home-banner.jpg";
 
 import styles from "./index.module.scss";
