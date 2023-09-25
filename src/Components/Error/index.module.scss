@@ -1,0 +1,28 @@
+.codeError {
+  font-size: 288px;
+  text-align: center;
+  color: #ff6060;
+  font-weight: 700;
+}
+
+.errorTextContent {
+  text-align: center;
+  color: #ff6060;
+  font-size: 36px;
+}
+
+.errorHomeLink {
+  border-bottom: 1px solid #ff6060;
+  text-align: center;
+  color: #ff6060;
+  display: inline;
+}
+
+.errorLinkContainer {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.errorLinkContainer a {
+  text-decoration: none;
+}
