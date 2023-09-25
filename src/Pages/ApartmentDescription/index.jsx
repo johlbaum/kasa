@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-
+import { useEffect } from "react";
 import Slider from "../../components/Slider";
 import Accordion from "../../components/Accordion";
 import activeStar from "../../assets/star-active.png";
@@ -14,6 +14,10 @@ function ApartmentDescription() {
   const apartment = apartments.find(
     (apartment) => apartment.id === apartmentId
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const displayRate = () => {
     const stars = [];

@@ -1,10 +1,10 @@
 import styles from "./index.module.scss";
 
-function Banner(props) {
+function Banner({ dataBanner }) {
   return (
     <div className={styles.bannerContainer}>
-      <img src={props.imgBanner} alt="Côte rocheuse" />
-      <p className={styles.banner__text}>Chez vous, partout et ailleurs</p>
+      <img src={dataBanner.imgBanner} alt="Côte rocheuse" />
+      <p className={styles.banner__text}>{dataBanner.textContent}</p>
     </div>
   );
 }

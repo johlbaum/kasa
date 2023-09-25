@@ -1,7 +1,5 @@
-import React from "react";
 import { useState } from "react";
-import { FcPrevious } from "react-icons/fc";
-import { FcNext } from "react-icons/fc";
+import { FcPrevious, FcNext } from "react-icons/fc";
 import styles from "./index.module.scss";
 
 function Slider(props) {
@@ -27,9 +25,18 @@ function Slider(props) {
     <div className={styles.container}>
       <img src={props.apartmentData[imgIndex]} alt="" />
       <div className={styles.arrowContainer}>
-        <FcPrevious onClick={prevImg} className={styles.arrow} />
-        <FcNext onClick={nextImg} className={styles.arrow} />
+        {props.apartmentData.length > 1 ? (
+          <>
+            <FcPrevious onClick={prevImg} className={styles.arrow} />
+            <FcNext onClick={nextImg} className={styles.arrow} />
+          </>
+        ) : (
+          ""
+        )}
       </div>
+      <p className={styles.currentImageIndicator}>
+        {imgIndex + 1}\{props.apartmentData.length}
+      </p>
     </div>
   );
 }

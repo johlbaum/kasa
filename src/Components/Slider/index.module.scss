@@ -27,3 +27,13 @@
   object-fit: cover;
   border-radius: 25px;
 }
+
+.currentImageIndicator {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -2,13 +2,18 @@ import imgAboutBanner from "../../assets/about-banner.jpg";
 import Banner from "../../components/Banner/";
 import Accordion from "../../components/Accordion";
 import about from "../../data/about";
+import { useEffect } from "react";
 
 import styles from "./index.module.scss";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
-      <Banner imgBanner={imgAboutBanner} />
+      <Banner dataBanner={{ imgBanner: imgAboutBanner, textContent: "" }} />
       {about.map((currentAboutData) => {
         return (
           <div className={styles.accordion}>

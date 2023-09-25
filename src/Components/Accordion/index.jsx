@@ -3,7 +3,6 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 import styles from "./index.module.scss";
 
 function Accordion({ accordionData }) {
-  console.log(accordionData);
   const { title, content } = accordionData;
   const [isActive, setIsActive] = useState(false);
 
