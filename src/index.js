@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Error from "./components/Error";
 import ApartmentDescription from "./pages/ApartmentDescription";
+import { ActiveNavItemProvider } from "./utils/context";
 
 import styles from "./styles/global.module.scss";
 
@@ -17,18 +18,20 @@ root.render(
   <React.StrictMode>
     <Router>
       <div className={styles.mainContainer}>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/apartment/:apartmentId"
-              element={<ApartmentDescription />}
-            />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<Error />} />
-          </Routes>
-        </main>
+        <ActiveNavItemProvider>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/apartment/:apartmentId"
+                element={<ApartmentDescription />}
+              />
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<Error />} />
+            </Routes>
+          </main>
+        </ActiveNavItemProvider>
         <Footer />
       </div>
     </Router>

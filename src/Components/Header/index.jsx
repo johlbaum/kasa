@@ -1,24 +1,29 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext } from "react";
+import { ActiveNavItemContext } from "../../utils/context";
 import Logo from "../../assets/header-logo.png";
 
 import styles from "./index.module.scss";
 
 function Header() {
-  const [activeItem, setActiveItem] = useState("Accueil");
+  const { activeNavItem, setActiveNavItem } = useContext(ActiveNavItemContext);
 
   return (
     <header className={styles.header}>
       <Link to="/">
-        <img src={Logo} alt="Logo de Kasa" />
+        <img
+          src={Logo}
+          alt="Logo de Kasa"
+          onClick={() => setActiveNavItem("home")}
+        />
       </Link>
       <nav>
         <ul>
           <li>
             <Link
               to="/"
-              className={activeItem === "Accueil" ? styles.active : ""}
-              onClick={() => setActiveItem("Accueil")}
+              className={activeNavItem === "home" ? styles.active : ""}
+              onClick={() => setActiveNavItem("home")}
             >
               Accueil
             </Link>
@@ -26,8 +31,8 @@ function Header() {
           <li>
             <Link
               to="/about"
-              className={activeItem === "À propos" ? styles.active : ""}
-              onClick={() => setActiveItem("À propos")}
+              className={activeNavItem === "about" ? styles.active : ""}
+              onClick={() => setActiveNavItem("about")}
             >
               À propos
             </Link>
