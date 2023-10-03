@@ -6,6 +6,7 @@ import styles from "./index.module.scss";
 
 function Card(props) {
   const { setActiveNavItem } = useContext(ActiveNavItemContext);
+
   return (
     <div className={styles.card} onClick={() => setActiveNavItem(null)}>
       <Link to={`/apartment/${props.dataApartment.id}`}>
