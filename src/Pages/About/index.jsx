@@ -1,7 +1,7 @@
 import imgAboutBanner from "../../assets/about-banner.jpg";
 import Banner from "../../components/Banner/";
 import Accordion from "../../components/Accordion";
-import about from "../../data/about";
+import aboutData from "../../data/about";
 import { useEffect } from "react";
 
 import styles from "./index.module.scss";
@@ -20,7 +20,7 @@ function About() {
           altText: "Paysage de montage",
         }}
       />
-      {about.map((currentAboutData, index) => {
+      {aboutData.map((currentAboutData, index) => {
         return (
           <div
             key={`${currentAboutData}-${index}`}
