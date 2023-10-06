@@ -10,7 +10,7 @@ import Error from "./components/Error";
 import ApartmentDescription from "./pages/ApartmentDescription";
 import { ActiveNavItemProvider } from "./utils/context";
 
-import styles from "./styles/global.module.scss";
+import styles from "./utils/style/global.module.scss";
 
 const root = createRoot(document.getElementById("root"));
 
