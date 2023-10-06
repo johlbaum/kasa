@@ -5,10 +5,13 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
-}
 
-footer p {
-  color: white;
-  margin: 0;
+  img {
+    margin: 65px 0;
+  }
+
+  p {
+    color: white;
+    margin: 0;
+  }
 }

@@ -8,22 +8,22 @@ function Accordion({ accordionData }) {
 
   return (
     <div className={styles.accordion}>
-      <div className={styles.accordionHeader}>
-        <p className={styles.accordion__title}>{title}</p>
+      <div className={styles.accordion__header}>
+        <p className={styles.accordion__header__title}>{title}</p>
         <MdKeyboardArrowUp
           size={40}
           onClick={() => setIsActive((prev) => !prev)}
           className={
             isActive
-              ? `${styles.accordion__icon} ${styles.rotate}`
-              : styles.accordion__icon
+              ? `${styles.accordion__header__icon} ${styles.accordion__header__icon__rotate}`
+              : styles.accordion__header__icon
           }
         />
       </div>
       <div
         className={
           isActive
-            ? `${styles.accordion__content__wrapper} ${styles.active}`
+            ? `${styles.accordion__content__wrapper} ${styles.accordion__content__wrapper__active}`
             : styles.accordion__content__wrapper
         }
       >

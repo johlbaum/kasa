@@ -13,7 +13,13 @@ function About() {
 
   return (
     <>
-      <Banner dataBanner={{ imgBanner: imgAboutBanner, textContent: "" }} />
+      <Banner
+        dataBanner={{
+          imgBanner: imgAboutBanner,
+          textContent: "",
+          altText: "Paysage de montage",
+        }}
+      />
       {about.map((currentAboutData, index) => {
         return (
           <div

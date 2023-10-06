@@ -17,12 +17,16 @@ function Header() {
           onClick={() => setActiveNavItem("home")}
         />
       </Link>
-      <nav>
+      <nav className={styles.navbar}>
         <ul>
           <li>
             <Link
               to="/"
-              className={activeNavItem === "home" ? styles.active : ""}
+              className={
+                activeNavItem === "home"
+                  ? `${styles.navbar__link} ${styles.active}`
+                  : styles.navbar__link
+              }
               onClick={() => setActiveNavItem("home")}
             >
               Accueil
@@ -31,7 +35,11 @@ function Header() {
           <li>
             <Link
               to="/about"
-              className={activeNavItem === "about" ? styles.active : ""}
+              className={
+                activeNavItem === "about"
+                  ? `${styles.navbar__link} ${styles.active}`
+                  : styles.navbar__link
+              }
               onClick={() => setActiveNavItem("about")}
             >
               À propos

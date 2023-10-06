@@ -2,9 +2,9 @@ import { useParams, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import Slider from "../../components/Slider";
 import Accordion from "../../components/Accordion";
-import activeStar from "../../assets/star-active.png";
-import incativeStar from "../../assets/star-inactive.png";
 import apartments from "../../data/apartments";
+import Rating from "../../components/Rating";
+import Tag from "../../components/Tag";
 
 import styles from "./index.module.scss";
 
@@ -19,26 +19,6 @@ function ApartmentDescription() {
     window.scrollTo(0, 0);
   }, []);
 
-  const displayRate = () => {
-    const stars = [];
-    const rating = parseInt(apartment.rating);
-    for (let i = 0; i < rating; i++) {
-      stars.push(
-        <img key={`star-${i}`} src={activeStar} alt="Étoile active" />
-      );
-    }
-    while (stars.length < 5) {
-      stars.push(
-        <img
-          key={`star-inactive-${stars.length}`}
-          src={incativeStar}
-          alt="Étoile inactive"
-        />
-      );
-    }
-    return stars;
-  };
-
   return (
     <>
       {!apartment ? (
@@ -46,37 +26,26 @@ function ApartmentDescription() {
       ) : (
         <>
           <Slider apartmentData={apartment.pictures} />
-          <div className={styles.containerDescription}>
-            <div className={styles.description}>
-              <div className={styles.description__left}>
-                <h2 className={styles.description__left__title}>
-                  {apartment.title}
-                </h2>
-                <p className={styles.description__left__location}>
+          <div className={styles.description}>
+            <div className={styles.description__general}>
+              <div className={styles.left__block}>
+                <h2 className={styles.left__block__title}>{apartment.title}</h2>
+                <p className={styles.left__block__location}>
                   {apartment.location}
                 </p>
-                <div className={styles.desciption__tags}>
-                  {apartment.tags.map((tag, index) => {
-                    return (
-                      <p
-                        key={`${tag}-${index}`}
-                        className={styles.description__tags__tag}
-                      >
-                        {tag}
-                      </p>
-                    );
-                  })}
-                </div>
+                <Tag apartmentData={apartment} />
               </div>
-              <div className={styles.description__right}>
-                <div className={styles.description__host}>
+              <div className={styles.right__block}>
+                <div className={styles.right__block__host}>
                   <p>{apartment.host.name}</p>
                   <img src={apartment.host.picture} alt="Hôte" />
                 </div>
-                {displayRate()}
+                <div className={styles.right__block__rate}>
+                  {<Rating apartmentData={apartment} />}
+                </div>
               </div>
             </div>
-            <div className={styles.accordions}>
+            <div className={styles.description__detailed}>
               <Accordion
                 accordionData={{
                   title: "Description",

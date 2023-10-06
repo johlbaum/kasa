@@ -7,4 +7,13 @@
   background-color: #f6f6f6;
   border-radius: 25px;
   margin-top: 35px;
+  margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 100%;
+    padding: 0;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
 }
