@@ -21,9 +21,11 @@ $font-size-medium: 18px;
     max-width: 1240px;
     padding: 0 50px;
     margin: auto;
+    min-height: calc(100vh - 361px);
 
     @media (max-width: 768px) {
       padding: 0 20px 20px 20px;
+      min-height: calc(100vh - 295px);
     }
   }
 }
