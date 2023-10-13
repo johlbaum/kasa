@@ -1,10 +1,10 @@
-import Logo from "../../assets/footer-logo.png";
+import Logo from '../../assets/footer-logo.png';
 
-import styles from "./index.modules.scss";
+import styles from './index.modules.scss';
 
 function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <img src={Logo} alt="Logo de kasa" />
       <p>© 2023 Kasa. All rights reserved</p>
     </footer>
