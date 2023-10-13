@@ -1,0 +1,48 @@
+$main-color: #ff6060;
+$breakpoint-small: 768px;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  padding: 40px 50px 40px 50px;
+  margin: auto;
+
+  @media (max-width: $breakpoint-small) {
+    padding: 20px;
+    img {
+      width: 130px;
+    }
+  }
+}
+
+.navbar {
+  ul {
+    list-style-type: none;
+    display: flex;
+
+    li {
+      padding-left: 40px;
+
+      @media (max-width: $breakpoint-small) {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $main-color;
+    font-size: 24px;
+
+    @media (max-width: $breakpoint-small) {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    &.active {
+      border-bottom: 2px solid $main-color;
+    }
+  }
+}

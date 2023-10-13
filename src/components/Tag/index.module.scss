@@ -1,0 +1,23 @@
+$main-color: #ff6060;
+$secondary-color: #fff;
+$breakpoint-small: 768px;
+
+.tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  > p {
+    background-color: $main-color;
+    color: $secondary-color;
+    padding: 5px 30px;
+    border-radius: 10px;
+    margin-right: 15px;
+
+    @media (max-width: $breakpoint-small) {
+      font-size: 10px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+  }
+}

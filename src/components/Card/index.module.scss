@@ -1,0 +1,29 @@
+$breakpoint-small: 768px;
+
+@import "../../utils/style/global.module.scss";
+
+.card {
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    filter: brightness(0.8);
+
+    @media (max-width: $breakpoint-small) {
+      height: 255px;
+      border-radius: 10px;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #fff;
+    font-size: $font-size-medium;
+  }
+}
