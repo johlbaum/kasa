@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { FcPrevious, FcNext } from "react-icons/fc";
+import { useState } from 'react';
+import { FcPrevious, FcNext } from 'react-icons/fc';
 
-import styles from "./index.module.scss";
+import styles from './index.module.scss';
 
 function Slider(props) {
   const [imgIndex, setImgIndex] = useState(0);
@@ -36,11 +36,17 @@ function Slider(props) {
             <FcNext onClick={nextImg} />
           </>
         ) : (
-          ""
+          ''
         )}
       </div>
       <p className={styles.slider__currentImageIndicator}>
-        {imgIndex + 1}\{props.apartmentData.length}
+        {props.apartmentData.length > 1 ? (
+          <>
+            {imgIndex + 1}\{props.apartmentData.length}
+          </>
+        ) : (
+          ''
+        )}
       </p>
     </div>
   );
